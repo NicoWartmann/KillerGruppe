@@ -1,0 +1,34 @@
+plugins {
+
+    // Support for Java
+    id 'java'
+    // Support for Java applications
+    id 'application'
+    // Support for JavaFX
+    id 'org.openjfx.javafxplugin' version '0.0.11'
+}
+
+// Configuration for Application plugin
+application {
+    // Define the main class for the application.
+    mainClass = 'ch.killergruppe.game.Main'
+}
+
+
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    implementation 'ch.qos.logback:logback-classic:1.3.0-alpha16'
+}
+
+test {
+    useJUnitPlatform()
+}
